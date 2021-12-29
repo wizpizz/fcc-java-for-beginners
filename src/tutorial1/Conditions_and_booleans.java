@@ -1,5 +1,4 @@
 package tutorial1;
-import java.util.Scanner;
 
 public class Conditions_and_booleans {
 
@@ -15,6 +14,7 @@ public class Conditions_and_booleans {
          * > greater than
          * < less than
          * == equal to
+         * use .equals() to compare strings
          * >= greater than or equal to
          * <= less than or equal to
          * != not equal to // returns true if the values are not equal
