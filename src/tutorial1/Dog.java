@@ -2,14 +2,19 @@ package tutorial1;
 
 public class Dog {
 
-    private String name; // name and age are only accessible to this class
-    private int age;
+    protected String name;
+    protected int age;
+
+    /*
+    public: accessible from everywhere
+    private: accessible only from the class
+    protected: accessible from the class and subclasses like Cat
+     */
 
     /*
     Constructor method to initialize the name and age
     Constructor has to have the same name as the class it is in
      */
-
     public Dog(String name, int age) {
         // Assign the passed in values to the instance variables
         this.name = name;
