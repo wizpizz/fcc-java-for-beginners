@@ -2,6 +2,12 @@ package tutorial1;
 
 public class Dog {
 
+    /*
+    static means that the variable is shared by all instances of the class
+    */
+
+    protected static int count = 0; //
+
     protected String name;
     protected int age;
 
@@ -19,6 +25,9 @@ public class Dog {
         // Assign the passed in values to the instance variables
         this.name = name;
         this.age = age;
+        Dog.count += 1; // count must be referenced by the class name since it is static
+        Dog.display();
+        this.display2(); // this. can be used here since it is a non-static method
     }
 
     public void speak() {
@@ -35,5 +44,14 @@ public class Dog {
 
     private int add2() { // Only accessible to this class
         return this.age + 2;
+    }
+
+    public void display2() {
+        System.out.println("I am a dog!");
+    }
+
+    public static void display() {
+        System.out.println("I am a dog!");
+        // this. cannot be used here since it is a static method. The method does not know what instance it is called on
     }
 }
